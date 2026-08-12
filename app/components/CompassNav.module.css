@@ -1,0 +1,85 @@
+.wrap {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translate(-50%, -140%);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.55rem 1.1rem 0.55rem 0.6rem;
+  background: rgba(9, 12, 14, 0.72);
+  backdrop-filter: blur(10px);
+  border: var(--edge);
+  border-radius: 999px;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.wrap.visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dial {
+  width: 30px;
+  height: 30px;
+  flex: none;
+  color: var(--frost);
+}
+
+.dial line {
+  stroke: var(--panel-line);
+  stroke-width: 1;
+}
+
+.needle {
+  fill: var(--magicka-glow);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hub {
+  fill: var(--frost-bright);
+}
+
+.labels {
+  display: flex;
+  gap: 1rem;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-faint);
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.label:hover,
+.label:focus-visible {
+  color: var(--frost);
+}
+
+.label.active {
+  color: var(--frost-bright);
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    top: auto;
+    bottom: 1.1rem;
+    gap: 0.7rem;
+    padding: 0.5rem 0.85rem;
+  }
+  .labels {
+    gap: 0.6rem;
+  }
+  .label {
+    font-size: 0.6rem;
+  }
+}

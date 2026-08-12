@@ -1,0 +1,43 @@
+.footer {
+  border-top: var(--edge);
+  background: var(--panel);
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 34s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}
+
+.text {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  padding: 0.9rem 2rem;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.credit {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem clamp(1.25rem, 4vw, 3rem) 1.25rem;
+  border-top: var(--edge);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}

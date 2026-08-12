@@ -1,0 +1,59 @@
+.heading {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-top: 0.4rem;
+}
+
+.headHr {
+  margin: clamp(1.5rem, 3vw, 2.25rem) 0 clamp(2rem, 4vw, 2.5rem);
+}
+
+.lede {
+  max-width: 56ch;
+  font-size: 1.05rem;
+  color: var(--frost);
+  margin: 0 0 2.5rem;
+}
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 0.25rem;
+  border-top: var(--edge);
+  text-decoration: none;
+  color: var(--ink);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.links li:last-child .link {
+  border-bottom: var(--edge);
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--frost-bright);
+  padding-left: 0.75rem;
+}
+
+.linkLabel {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.linkValue {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: 0.02em;
+}
