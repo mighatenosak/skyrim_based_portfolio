@@ -52,7 +52,9 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.node.open .star {
+.node.open .star,
+.node:hover .star,
+.node:focus-visible .star {
   opacity: 1;
   transform: scale(1.5);
 }
@@ -105,6 +107,8 @@
   transition: max-height 0.35s ease, opacity 0.3s ease, margin 0.35s ease;
 }
 
+.node:hover .detail,
+.node:focus-visible .detail,
 .detailOpen {
   max-height: 8rem;
   opacity: 1;

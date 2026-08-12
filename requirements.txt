@@ -1,0 +1,2 @@
+# No Python dependencies required for this project.
+# This is a Next.js application — dependencies are managed via package.json.

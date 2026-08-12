@@ -1,11 +1,13 @@
 "use client";
 
 import styles from "./MainMenu.module.css";
+import Vegvisir from "./Vegvisir";
 
 const ITEMS = [
   { label: "Continue", target: "about", sub: "resume where the story starts" },
   { label: "Skills", target: "skills", sub: "schools of practice" },
-  { label: "Quests Completed", target: "projects", sub: "shipped modules" },
+  { label: "Quests Completed", target: "projects", sub: "flagship builds" },
+  { label: "Arsenal", target: "arsenal", sub: "34 modules deployed" },
   { label: "Send Word", target: "contact", sub: "get in touch" },
 ];
 
@@ -17,30 +19,20 @@ export default function MainMenu() {
   return (
     <header className={styles.menu}>
       <div className={styles.fog} aria-hidden="true" />
-      <div className={styles.crestWrap} aria-hidden="true">
-        <svg viewBox="0 0 120 140" className={styles.crest}>
-          <polygon
-            points="60,6 96,30 108,74 82,132 60,110 38,132 12,74 24,30"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-          <path
-            d="M60 30 C 74 46, 74 66, 60 92 C 46 66, 46 46, 60 30 Z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-          <text x="60" y="76" textAnchor="middle" className={styles.crestMark}>
-            TS
-          </text>
-        </svg>
+      <div className={styles.crestWrap}>
+        <Vegvisir className={styles.crest} />
       </div>
 
       <div className={styles.titleBlock}>
         <p className={styles.eyebrowLine}>A portfolio, of sorts</p>
-        <h1 className={styles.wordmark}>TAASIF</h1>
-        <p className={styles.tagline}>Odoo 19 Developer &nbsp;·&nbsp; BCA Honours Student</p>
+        <h1 className={styles.wordmark} lang="ar" dir="rtl" aria-label="Salman Ali Khan">
+          سلمان علي خان
+        </h1>
+        <p className={styles.translit}>Salman Ali Khan</p>
+        <p className={styles.tagline}>
+          AI/ML Engineer &nbsp;+&nbsp; Odoo 19 Developer
+        </p>
+        <p className={styles.tagline2}>BCA Honours Graduate &nbsp;·&nbsp; 2022–2026</p>
       </div>
 
       <nav className={styles.list} aria-label="Main menu">

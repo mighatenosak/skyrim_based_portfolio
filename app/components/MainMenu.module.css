@@ -42,13 +42,6 @@
   filter: drop-shadow(0 0 22px rgba(111, 168, 201, 0.12));
 }
 
-.crestMark {
-  font-family: var(--font-display);
-  font-size: 15px;
-  fill: currentColor;
-  letter-spacing: 0.08em;
-}
-
 .titleBlock {
   position: relative;
   z-index: 1;
@@ -65,22 +58,40 @@
 }
 
 .wordmark {
-  font-size: clamp(3rem, 9vw, 6rem);
-  letter-spacing: 0.12em;
-  line-height: 1;
+  font-family: var(--font-arabic);
+  font-size: clamp(2.6rem, 7.5vw, 4.5rem);
+  letter-spacing: 0;
+  line-height: 1.35;
   background: linear-gradient(180deg, var(--frost-bright), var(--frost) 65%, var(--ink-dim));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+.translit {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
 .tagline {
-  margin: 1rem 0 0;
+  margin: 1.1rem 0 0;
   font-family: var(--font-body);
   font-style: italic;
   font-weight: 300;
   font-size: clamp(0.95rem, 1.6vw, 1.15rem);
   color: var(--ink);
+}
+
+.tagline2 {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(0.85rem, 1.3vw, 1rem);
+  color: var(--ink-dim);
 }
 
 .list {

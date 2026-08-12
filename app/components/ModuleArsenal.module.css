@@ -1,0 +1,113 @@
+.heading {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-top: 0.4rem;
+}
+
+.sub {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+  margin: 0.6rem 0 0;
+}
+
+.headHr {
+  margin: clamp(1.25rem, 3vw, 1.75rem) 0 clamp(2.25rem, 4vw, 3rem);
+}
+
+.layout {
+  composes: bracket-panel from global;
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) 1fr;
+  min-height: 18rem;
+}
+
+.tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  border-right: var(--edge);
+}
+
+.tab {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.75rem 1.35rem;
+  color: var(--ink-dim);
+  border-left: 2px solid transparent;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tab:hover,
+.tab:focus-visible {
+  color: var(--frost);
+  background: rgba(185, 204, 210, 0.04);
+}
+
+.tabActive {
+  color: var(--frost-bright);
+  border-left-color: var(--stamina-glow);
+  background: rgba(76, 122, 82, 0.08);
+}
+
+.tabCount {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+}
+
+.pane {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.pillGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.pill {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  color: var(--frost);
+  background: var(--void);
+  border: 1px solid var(--panel-line);
+  padding: 0.4rem 0.75rem;
+  border-radius: 3px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.pill:hover {
+  border-color: var(--stamina-glow);
+  color: var(--frost-bright);
+}
+
+@media (max-width: 680px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .tabs {
+    border-right: none;
+    border-bottom: var(--edge);
+    display: flex;
+    overflow-x: auto;
+    padding: 0;
+  }
+  .tab {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+  }
+  .tabActive {
+    border-left-color: transparent;
+    border-bottom-color: var(--stamina-glow);
+  }
+}

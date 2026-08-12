@@ -5,9 +5,10 @@ import styles from "./CompassNav.module.css";
 
 const POINTS = [
   { id: "about", label: "Character", angle: -90 },
-  { id: "skills", label: "Skills", angle: 0 },
-  { id: "projects", label: "Quests", angle: 90 },
-  { id: "contact", label: "Send Word", angle: 180 },
+  { id: "skills", label: "Skills", angle: -18 },
+  { id: "projects", label: "Quests", angle: 54 },
+  { id: "arsenal", label: "Arsenal", angle: 126 },
+  { id: "contact", label: "Send Word", angle: 198 },
 ];
 
 export default function CompassNav() {

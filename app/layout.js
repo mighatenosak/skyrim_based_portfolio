@@ -1,4 +1,4 @@
-import { Cinzel, Spectral, JetBrains_Mono } from "next/font/google";
+import { Cinzel, Spectral, JetBrains_Mono, Amiri } from "next/font/google";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -23,16 +23,25 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
+const amiri = Amiri({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-arabic",
+  display: "swap",
+});
+
 export const metadata = {
-  title: "Taasif — Odoo Developer",
+  title: "Salman Ali Khan — AI/ML Engineer & Odoo Developer",
   description:
-    "Portfolio of Taasif, a BCA Honours student and Odoo 19 developer building custom modules across real estate, payroll, and CRM systems.",
+    "Portfolio of Salman Ali Khan, an AI/ML engineer and Odoo 19 developer, BCA Honours graduate (2022–2026), building custom Odoo modules and ML systems.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${cinzel.variable} ${spectral.variable} ${jetbrains.variable}`}>
+      <body
+        className={`${cinzel.variable} ${spectral.variable} ${jetbrains.variable} ${amiri.variable}`}
+      >
         {children}
       </body>
     </html>

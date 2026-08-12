@@ -1,9 +1,9 @@
 import styles from "./About.module.css";
 
 const STATS = [
-  { label: "Class", value: "Odoo Developer" },
-  { label: "Origin", value: "BCA Honours" },
-  { label: "Specialty", value: "Custom Modules" },
+  { label: "Class", value: "AI/ML Engineer + Odoo Developer" },
+  { label: "Origin", value: "BCA Honours (2022–2026)" },
+  { label: "Specialty", value: "Odoo Integrations & ML Systems" },
 ];
 
 export default function About() {
@@ -14,7 +14,9 @@ export default function About() {
           <div className={styles.sheetRow}>
             <div className={styles.sheetField}>
               <span className={styles.sheetLabel}>Name</span>
-              <span className={styles.sheetValue}>Taasif</span>
+              <span className={styles.sheetValue} lang="ar" dir="rtl">
+                سلمان علي خان
+              </span>
             </div>
             <hr className={styles.vDivider} />
             {STATS.map((s) => (
@@ -29,19 +31,22 @@ export default function About() {
 
           <div className={styles.body}>
             <p className={styles.lede}>
-              Currently reading for a BCA (Bachelor of Computer Applications) Honours
-              degree, and working as an Odoo 19 developer — building the custom
-              modules that sit underneath a business&rsquo;s day-to-day: the ones
-              that touch payroll runs, sales approvals, property contracts, and the
-              holiday calendar nobody notices until it&rsquo;s wrong.
+              A BCA (Bachelor of Computer Applications) Honours graduate
+              (2022–2026) working across two disciplines: Odoo 19 development
+              and applied AI/ML. On the Odoo side, that&rsquo;s meant building
+              real estate modules for top companies in Riyadh, working with
+              bsoln Riyadh, and wiring Odoo into the systems a business
+              actually runs on — ZK biometric devices, WhatsApp, Instagram,
+              and Facebook lead capture into CRM, Snapchat ad leads, and a
+              Salla storefront integration.
             </p>
             <p>
-              The work is less about flashy features and more about getting the
-              detail right — the field that got renamed between versions, the
-              approval that has to escalate to exactly the right person, the
-              calendar date that has to land on the correct day of a lunar month
-              every single year. It rewards patience, and a willingness to read
-              the changelog twice.
+              On the ML side, that&rsquo;s meant building a brain tumour
+              detection system end to end, and a habit of reaching for
+              PostgreSQL, MongoDB, FastAPI, and Pydantic whenever a project
+              needs a backend that holds up. The common thread is the same
+              one from the Odoo work: get the integration right at the seam,
+              because that&rsquo;s where everything actually breaks.
             </p>
           </div>
         </div>

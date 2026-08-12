@@ -19,7 +19,9 @@ export default function TipTicker() {
         </span>
       </div>
       <div className={styles.credit}>
-        <span>Taasif — Odoo 19 Developer</span>
+        <span lang="ar" dir="rtl">
+          سلمان علي خان — AI/ML Engineer &amp; Odoo Developer
+        </span>
         <span>{new Date().getFullYear()}</span>
       </div>
     </footer>

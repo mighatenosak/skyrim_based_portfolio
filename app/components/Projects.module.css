@@ -19,6 +19,8 @@
   margin: 0;
   padding: 0.5rem 0;
   border-right: var(--edge);
+  max-height: 32rem;
+  overflow-y: auto;
 }
 
 .listItem {
@@ -144,6 +146,8 @@
     border-bottom: var(--edge);
     display: flex;
     overflow-x: auto;
+    overflow-y: visible;
+    max-height: none;
   }
   .listItem {
     border-left: none;

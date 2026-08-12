@@ -44,6 +44,11 @@
   letter-spacing: 0.03em;
 }
 
+.sheetValue[lang="ar"] {
+  font-family: var(--font-arabic);
+  letter-spacing: 0;
+}
+
 .body {
   padding-top: clamp(1.5rem, 3vw, 2rem);
   max-width: 62ch;

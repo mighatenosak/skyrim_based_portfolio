@@ -1,9 +1,21 @@
 import styles from "./Contact.module.css";
 
 const LINKS = [
-  { label: "Email", value: "your.email@example.com", href: "mailto:your.email@example.com" },
-  { label: "GitHub", value: "github.com/yourusername", href: "https://github.com/yourusername" },
-  { label: "LinkedIn", value: "linkedin.com/in/yourusername", href: "https://linkedin.com/in/yourusername" },
+  {
+    label: "Email",
+    value: "khanalisak1113@gmail.com",
+    href: "mailto:khanalisak1113@gmail.com",
+  },
+  {
+    label: "GitHub",
+    value: "github.com/mighatenosak",
+    href: "https://github.com/mighatenosak",
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/salman-ali-khan-95157b353",
+    href: "https://linkedin.com/in/salman-ali-khan-95157b353",
+  },
 ];
 
 export default function Contact() {
@@ -15,9 +27,8 @@ export default function Contact() {
         <hr className={`hairline ${styles.headHr}`} />
 
         <p className={styles.lede}>
-          Open to Odoo development work, freelance module builds, or just a
-          conversation about a system that&rsquo;s currently held together with
-          scheduled actions and hope.
+          Open for AI/ML, software, and Odoo development work — freelance
+          module builds, integrations, or a full system built from scratch.
         </p>
 
         <ul className={styles.links}>

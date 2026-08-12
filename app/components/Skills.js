@@ -6,45 +6,45 @@ import styles from "./Skills.module.css";
 const SCHOOLS = [
   {
     name: "Destruction",
-    level: 61,
-    focus: "Odoo & Python",
+    level: 68,
+    focus: "Odoo 19 Development",
     detail:
-      "Server-side module development in Odoo 19 — models, views, security, and the ORM quirks that come with a new major version.",
-  },
-  {
-    name: "Restoration",
-    level: 47,
-    focus: "Debugging",
-    detail:
-      "Tracing a miscalibrated constant through a holiday-calendar bug, or a field renamed between Odoo releases, back to a working fix.",
-  },
-  {
-    name: "Conjuration",
-    level: 44,
-    focus: "Data & ORM",
-    detail:
-      "Modelling relations across sales, HR, and property records so approvals, payroll, and contracts pull from one consistent source.",
-  },
-  {
-    name: "Enchanting",
-    level: 39,
-    focus: "Automation",
-    detail:
-      "Cron jobs, wizards, and scheduled exports — like turning a manual payroll spreadsheet into a one-click XLSX generation.",
+      "34+ custom Odoo modules shipped across CRM, sales, HR, payroll, and Saudi localization — real estate modules for top Riyadh companies among them.",
   },
   {
     name: "Alteration",
-    level: 33,
-    focus: "Applied ML",
+    level: 52,
+    focus: "AI / Deep Learning",
     detail:
-      "A two-stage YOLOv8 + EfficientNet pipeline for brain-tumour detection, built and written up as a full technical report.",
+      "Deep learning and applied ML, including a two-stage YOLOv8 + EfficientNet pipeline for brain-tumour detection (NeuroScan).",
+  },
+  {
+    name: "Enchanting",
+    level: 58,
+    focus: "Integrations",
+    detail:
+      "Wiring Odoo into the outside world: ZK biometric devices, WhatsApp/Instagram/Facebook lead capture into CRM, Snapchat ad leads, and Salla.",
+  },
+  {
+    name: "Conjuration",
+    level: 49,
+    focus: "Databases",
+    detail:
+      "PostgreSQL, MongoDB, SQLAlchemy, and Alembic — modelling and migrating the data underneath both the Odoo and the ML side of the work.",
+  },
+  {
+    name: "Restoration",
+    level: 44,
+    focus: "Backend & APIs",
+    detail:
+      "FastAPI and Pydantic for building and validating services — the layer that sits between the data and whatever's consuming it.",
   },
   {
     name: "Illusion",
-    level: 29,
-    focus: "Frontend",
+    level: 38,
+    focus: "Systems & Languages",
     detail:
-      "Interfaces that stay out of the way — including this one, styled after the very game that made a compass menu feel iconic.",
+      "Python, Java, C, C++, and Linux, plus computer architecture, DBMS, and software engineering fundamentals from the BCA Honours program.",
   },
 ];
 
