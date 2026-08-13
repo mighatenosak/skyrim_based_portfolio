@@ -1,0 +1,163 @@
+.page {
+  min-height: 100svh;
+  padding: clamp(4rem, 8vw, 6rem) 0 5rem;
+}
+
+.back {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  transition: color 0.2s ease;
+}
+
+.back:hover,
+.back:focus-visible {
+  color: var(--frost-bright);
+}
+
+.head {
+  max-width: 62ch;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-top: 0.6rem;
+}
+
+.summary {
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--frost);
+}
+
+.statsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin: 2.25rem 0 1.5rem;
+}
+
+.statLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.3rem;
+}
+
+.statValue {
+  font-family: var(--font-body);
+  color: var(--frost);
+  font-size: 0.95rem;
+}
+
+.stackRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.stackPill {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--stamina-glow);
+  border: 1px solid rgba(124, 179, 127, 0.35);
+  padding: 0.3rem 0.65rem;
+}
+
+.body {
+  max-width: 68ch;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.body p {
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+
+.effectsBlock {
+  max-width: 62ch;
+  margin: 2.5rem 0 4rem;
+}
+
+.effects {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.effects li {
+  position: relative;
+  padding-left: 1.35rem;
+  font-size: 0.95rem;
+  color: var(--frost);
+}
+
+.effects li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 1px;
+  background: var(--magicka-glow);
+}
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-top: var(--edge);
+  padding-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.pagerLink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-decoration: none;
+  max-width: 22rem;
+}
+
+.pagerRight {
+  text-align: right;
+  margin-left: auto;
+}
+
+.pagerDir {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.pagerName {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--frost);
+  transition: color 0.2s ease;
+}
+
+.pagerLink:hover .pagerName,
+.pagerLink:focus-visible .pagerName {
+  color: var(--frost-bright);
+}

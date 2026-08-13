@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "./CompassNav.module.css";
+import { playHover } from "../lib/sound";
 
 const POINTS = [
   { id: "about", label: "Character", angle: -90 },
@@ -62,6 +63,7 @@ export default function CompassNav() {
             key={p.id}
             href={`#${p.id}`}
             className={`${styles.label} ${active === p.id ? styles.active : ""}`}
+            onMouseEnter={playHover}
           >
             {p.label}
           </a>

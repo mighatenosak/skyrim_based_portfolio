@@ -23,9 +23,40 @@
   --font-display: "Cinzel", serif;
   --font-body: "Spectral", serif;
   --font-mono: "JetBrains Mono", monospace;
+  --font-arabic: "Amiri", serif;
 
   --edge: 1px solid var(--panel-line);
   --container: 1180px;
+}
+
+/* ---- Journal mode: a second, parchment palette for reading the content
+   sections against — the hero stays lit like a main menu regardless ---- */
+html[data-theme="journal"] {
+  --void: #eadfc3;
+  --panel: #e3d5ac;
+  --panel-raised: #ece0bd;
+  --panel-line: rgba(74, 52, 24, 0.22);
+  --frost: #4a3418;
+  --frost-bright: #2a1c0c;
+  --ink: #4a3418;
+  --ink-dim: #6b5030;
+  --ink-faint: #8a6f47;
+
+  --health: #8a2f2f;
+  --health-glow: #a8453a;
+  --magicka: #3f5570;
+  --magicka-glow: #52708f;
+  --stamina: #52633a;
+  --stamina-glow: #6c7f4c;
+}
+
+html[data-theme="journal"] body {
+  background: var(--void);
+}
+
+html[data-theme="journal"] ::selection {
+  background: var(--magicka-glow);
+  color: #f4ead0;
 }
 
 * {
@@ -45,6 +76,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 body::before {
@@ -107,6 +139,7 @@ section {
   position: relative;
   border: var(--edge);
   background: linear-gradient(180deg, var(--panel-raised), var(--panel));
+  transition: background 0.4s ease, border-color 0.4s ease;
 }
 
 .bracket-panel::before,

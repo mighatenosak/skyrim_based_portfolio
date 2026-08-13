@@ -1,4 +1,7 @@
+"use client";
+
 import styles from "./Contact.module.css";
+import { playHover, playSelect } from "../lib/sound";
 
 const LINKS = [
   {
@@ -31,10 +34,26 @@ export default function Contact() {
           module builds, integrations, or a full system built from scratch.
         </p>
 
+        <a
+          href="/resume.pdf"
+          download
+          className={styles.resumeBtn}
+          onMouseEnter={playHover}
+          onClick={playSelect}
+        >
+          Download Résumé
+        </a>
+
         <ul className={styles.links}>
           {LINKS.map((l) => (
             <li key={l.label}>
-              <a href={l.href} className={styles.link} target="_blank" rel="noreferrer">
+              <a
+                href={l.href}
+                className={styles.link}
+                target="_blank"
+                rel="noreferrer"
+                onMouseEnter={playHover}
+              >
                 <span className={styles.linkLabel}>{l.label}</span>
                 <span className={styles.linkValue}>{l.value}</span>
               </a>

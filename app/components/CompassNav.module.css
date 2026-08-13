@@ -49,6 +49,12 @@
   gap: 1rem;
 }
 
+.divider {
+  width: 1px;
+  height: 18px;
+  background: var(--panel-line);
+}
+
 .label {
   font-family: var(--font-mono);
   font-size: 0.66rem;

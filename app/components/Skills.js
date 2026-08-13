@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./Skills.module.css";
+import { playHover, playSelect } from "../lib/sound";
 
 const SCHOOLS = [
   {
@@ -66,6 +67,7 @@ export default function Skills() {
                 key={s.name}
                 className={`${styles.node} ${open ? styles.open : ""}`}
                 onClick={() => setOpenIndex(open ? -1 : i)}
+                onMouseEnter={playHover}
                 aria-expanded={open}
               >
                 <span className={styles.star} aria-hidden="true" />

@@ -31,14 +31,62 @@ const amiri = Amiri({
 });
 
 export const metadata = {
-  title: "Salman Ali Khan — AI/ML Engineer & Odoo Developer",
+  metadataBase: new URL("https://salman-ali-khan.vercel.app"),
+  title: {
+    default: "Salman Ali Khan — AI/ML Engineer & Odoo Developer",
+    template: "%s",
+  },
   description:
-    "Portfolio of Salman Ali Khan, an AI/ML engineer and Odoo 19 developer, BCA Honours graduate (2022–2026), building custom Odoo modules and ML systems.",
+    "Portfolio of Salman Ali Khan, an AI/ML engineer and Odoo 19 developer, BCA Honours graduate (2022–2026), building custom Odoo modules and ML systems in Riyadh.",
+  keywords: [
+    "Salman Ali Khan",
+    "Odoo developer",
+    "Odoo 19",
+    "AI ML engineer",
+    "Odoo Riyadh",
+    "Odoo real estate module",
+    "Odoo CRM integration",
+    "brain tumour detection",
+    "YOLOv8 EfficientNet",
+  ],
+  authors: [{ name: "Salman Ali Khan" }],
+  openGraph: {
+    title: "Salman Ali Khan — AI/ML Engineer & Odoo Developer",
+    description:
+      "AI/ML engineer and Odoo 19 developer, BCA Honours graduate (2022–2026), building custom Odoo modules and ML systems in Riyadh.",
+    url: "/",
+    siteName: "Salman Ali Khan",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Salman Ali Khan — AI/ML Engineer & Odoo Developer",
+    description:
+      "AI/ML engineer and Odoo 19 developer, BCA Honours graduate (2022–2026), building custom Odoo modules and ML systems in Riyadh.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
+const THEME_INIT_SCRIPT = `
+(function () {
+  try {
+    var t = window.localStorage.getItem("theme");
+    if (t === "journal" || t === "frost") {
+      document.documentElement.dataset.theme = t;
+    }
+  } catch (e) {}
+})();
+`;
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body
         className={`${cinzel.variable} ${spectral.variable} ${jetbrains.variable} ${amiri.variable}`}
       >

@@ -157,12 +157,27 @@
   z-index: 1;
   margin-top: 4rem;
   display: flex;
+  align-items: center;
   gap: 1.5rem;
   font-family: var(--font-mono);
   font-size: 0.68rem;
   letter-spacing: 0.08em;
   color: var(--ink-faint);
   text-transform: uppercase;
+}
+
+.resumeLink {
+  color: var(--magicka-glow);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(111, 168, 201, 0.4);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.resumeLink:hover,
+.resumeLink:focus-visible {
+  color: var(--frost-bright);
+  border-color: var(--frost-bright);
 }
 
 @media (max-width: 720px) {

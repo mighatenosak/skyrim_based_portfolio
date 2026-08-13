@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./ModuleArsenal.module.css";
+import { playHover } from "../lib/sound";
 
 const CATEGORIES = [
   {
@@ -90,6 +91,7 @@ export default function ModuleArsenal() {
                 <button
                   className={`${styles.tab} ${i === active ? styles.tabActive : ""}`}
                   onClick={() => setActive(i)}
+                  onMouseEnter={playHover}
                   role="tab"
                   aria-selected={i === active}
                 >

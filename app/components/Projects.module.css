@@ -137,6 +137,46 @@
   background: var(--magicka-glow);
 }
 
+.caseStudyLink {
+  display: inline-block;
+  margin-top: 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--magicka-glow);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(111, 168, 201, 0.4);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.caseStudyLink:hover,
+.caseStudyLink:focus-visible {
+  color: var(--frost-bright);
+  border-color: var(--frost-bright);
+}
+
+.caseStudyLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magicka-glow);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.caseStudyLink:hover,
+.caseStudyLink:focus-visible {
+  color: var(--frost-bright);
+  border-bottom-color: var(--magicka-glow);
+}
+
 @media (max-width: 680px) {
   .layout {
     grid-template-columns: 1fr;

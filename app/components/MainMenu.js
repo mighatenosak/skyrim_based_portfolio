@@ -2,6 +2,7 @@
 
 import styles from "./MainMenu.module.css";
 import Vegvisir from "./Vegvisir";
+import { playHover, playSelect } from "../lib/sound";
 
 const ITEMS = [
   { label: "Continue", target: "about", sub: "resume where the story starts" },
@@ -12,6 +13,7 @@ const ITEMS = [
 ];
 
 function scrollTo(id) {
+  playSelect();
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 }
 
@@ -41,6 +43,7 @@ export default function MainMenu() {
             key={item.target}
             className={styles.item}
             onClick={() => scrollTo(item.target)}
+            onMouseEnter={playHover}
           >
             <span className={styles.marker} aria-hidden="true">
               ▸
@@ -55,6 +58,15 @@ export default function MainMenu() {
 
       <div className={styles.footer}>
         <span className={styles.buildTag}>Built for the web · v1.0</span>
+        <a
+          href="/resume.pdf"
+          download
+          className={styles.resumeLink}
+          onMouseEnter={playHover}
+          onClick={playSelect}
+        >
+          Download Résumé ↓
+        </a>
         <span className={styles.hint}>scroll, or choose above</span>
       </div>
     </header>
