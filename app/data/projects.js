@@ -134,7 +134,7 @@ export const PROJECTS = [
   },
   {
     slug: "clock-in-attendance-app",
-    name: "Clock-in Attendance App",
+    name: "Clokin Attendance App",
     tag: "Software Engineering",
     weight: "Attendance Tracking",
     value: "Standalone App",
